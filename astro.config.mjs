@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://zmatus.github.io/portfolio',
+  site: 'https://zmatus.github.io',
   base: '/portfolio/',
   integrations: [mdx(), sitemap(), tailwind()]
 });

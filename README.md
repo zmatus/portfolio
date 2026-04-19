@@ -1,10 +1,6 @@
 # Personal Portfolio
 
-This site was created from the Astrofy template.
-
-## Demo
-
-View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
+This site was created from the [Astrofy](https://astrofy-template.netlify.app/) template.
 
 ## Installation
 

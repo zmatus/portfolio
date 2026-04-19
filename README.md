@@ -1,8 +1,6 @@
-# Astrofy | Personal Portfolio Website Template
+# Personal Portfolio
 
-![Astrofy | Personal Porfolio Website Template](public/social_img.webp)
-
-Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with a Blog, CV, Project Section, and RSS Feed.
+This site was created from the Astrofy template.
 
 ## Demo
 
@@ -13,13 +11,19 @@ View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
 Run the following command in your terminal
 
 ```bash
-pnpm install
+npm install
 ```
 
-Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
+Once the packages are installed, run Astro locally with:
 
 ```bash
-pnpm run dev
+npm run dev
+```
+
+Then open the local site at:
+
+```txt
+http://localhost:4321
 ```
 
 ## Tech Stack
@@ -64,8 +68,8 @@ pnpm run dev
 │   └── config.ts
 ├── public/
 │   ├── favicon.svg
-│   └── profile.webp
-│   └── social_img.webp
+│   │   └── profile.webp
+│   │   └── social_img.webp
 ├── astro.config.mjs
 ├── tailwind.config.cjs
 ├── package.json
@@ -121,7 +125,7 @@ The timeline components are used to confirm the CV.
 
 #### Card & HorizontalCard
 
-The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description. 
+The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description.
 
 ```html
 <HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
@@ -131,11 +135,11 @@ tags={['Array','of','tags']} />
 
 #### Adding a Custom Component
 
-To add a custom component, you can create a .astro file in the components folder under the source folder. 
+To add a custom component, you can create a .astro file in the components folder under the source folder.
 
-Components must follow this template. The ```---``` represents the code fence and uses Javascript and can be used for imports. 
+Components must follow this template. The `---` represents the code fence and uses Javascript and can be used for imports.
 
-The HTML component is the actual style of your new component. 
+The HTML component is the actual style of your new component.
 
 ```html
 ---
@@ -144,13 +148,13 @@ The HTML component is the actual style of your new component.
 <!-- Component Template (HTML + JS Expressions) -->
 ```
 
-For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here. 
+For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here.
 
 ### Layouts
 
 Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
 
-The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the ```../config``` folder. Data placed there can be imported anywhere using import. 
+The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the `../config` folder. Data placed there can be imported anywhere using import.
 
 ### Content
 
@@ -205,7 +209,13 @@ You can choose among 30 themes available or create your custom theme. See themes
 
 ## Sitemap
 
-The Sitemap is generated automatically when you build your website in the root of the domain. Please update the `robots.txt` file in the public folder with your site name URL for the Sitemap.
+The sitemap is generated automatically during build by `@astrojs/sitemap` when `site` is set in `astro.config.mjs`.
+
+Update the `robots.txt` file in `public/` with your deployed sitemap URL, for example:
+
+```txt
+Sitemap: https://zmatus.github.io/sitemap-index.xml
+```
 
 ## Deploy
 
@@ -234,4 +244,4 @@ Astrofy is licensed under the MIT license — see the [LICENSE](https://github.c
   <img src="https://contrib.rocks/image?repo=manuelernestog/astrofy" />
 </a>
 
-Made with [contrib.rocks](https://contrib.rocks).
+Made with [contrib.rocks](https://contrib.rocks").
